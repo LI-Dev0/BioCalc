@@ -1,0 +1,4 @@
+# gitignore template
+Strategy/
+.env
+node_modules/
