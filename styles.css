@@ -1,0 +1,151 @@
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background: #f4f7fb;
+  color: #132238;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #f4f7fb, #e5eef8);
+}
+
+.page-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+}
+
+.hero-card,
+.calculator-card,
+.results-card {
+  background: #ffffff;
+  border: 1px solid #dfe7f1;
+  border-radius: 20px;
+  box-shadow: 0 14px 40px rgba(14, 31, 53, 0.08);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+  color: #2d7a4d;
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+.intro {
+  max-width: 760px;
+  line-height: 1.6;
+  color: #4b5c72;
+}
+
+.calculator-card {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+}
+
+.calculator-form {
+  display: grid;
+  gap: 16px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+select,
+button {
+  font: inherit;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #cfd9e3;
+}
+
+.input-inline {
+  display: flex;
+  gap: 10px;
+}
+
+.input-inline input {
+  flex: 1;
+}
+
+button {
+  background: #2d7a4d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform 120ms ease, background 120ms ease;
+}
+
+button:hover {
+  background: #24693f;
+  transform: translateY(-1px);
+}
+
+.assumptions-card ul {
+  padding-left: 18px;
+  color: #4b5c72;
+  line-height: 1.7;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.result-box {
+  background: #f7fafc;
+  border: 1px solid #e1ebf3;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  color: #6a7b90;
+  font-size: 0.95rem;
+}
+
+.note-box {
+  background: #eef7f0;
+  border-left: 4px solid #2d7a4d;
+  border-radius: 12px;
+  padding: 16px 18px;
+  color: #2d4a3b;
+}
+
+@media (max-width: 840px) {
+  .calculator-card {
+    grid-template-columns: 1fr;
+  }
+
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+}
