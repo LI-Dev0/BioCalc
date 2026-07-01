@@ -8,7 +8,7 @@ const presets = {
   },
   cowManure: {
     label: 'Cow manure',
-    biogasYieldPerKgVs: 0.24,
+    biogasYieldPerKgVs: 0.3,
     energyPerM3: 5.8,
     defaultDryMatter: 18,
     defaultVsFactor: 75,
@@ -22,7 +22,7 @@ const presets = {
   },
   energyCrop: {
     label: 'Energy crop',
-    biogasYieldPerKgVs: 0.74,
+    biogasYieldPerKgVs: 0.55,
     energyPerM3: 6.3,
     defaultDryMatter: 30,
     defaultVsFactor: 85,
@@ -76,7 +76,7 @@ function estimateBiogas() {
 
   const biogasM3PerDay = volatileSolidsKg * preset.biogasYieldPerKgVs * hrtScale;
   const energyKwhPerDay = biogasM3PerDay * preset.energyPerM3;
-  const electricityKwhPerDay = energyKwhPerDay * 0.38;
+  const electricityKwhPerDay = energyKwhPerDay * 0.40;
 
   biogasResult.textContent = `${formatNumber(biogasM3PerDay)} m³/day`;
   energyResult.textContent = `${formatNumber(energyKwhPerDay)} kWh/day`;
