@@ -11,31 +11,33 @@
 
 body {
   margin: 0;
-  background: linear-gradient(135deg, #f4f7fb, #e5eef8);
+  background: linear-gradient(135deg, #1a5458, #e5eef8);
 }
 
 .page-shell {
   max-width: 1100px;
   margin: 0 auto;
   padding: 32px 20px 48px;
+  color: #132238;
 }
 
 .hero-card,
 .calculator-card,
 .results-card {
-  background: #ffffff;
+  background-color: #72807571;
   border: 1px solid #dfe7f1;
   border-radius: 20px;
   box-shadow: 0 14px 40px rgba(14, 31, 53, 0.08);
   padding: 24px;
   margin-bottom: 24px;
+  color: #132238;
 }
 
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-size: 0.8rem;
-  color: #2d7a4d;
+  color: #1b492e;
   font-weight: 700;
 }
 
@@ -48,13 +50,13 @@ h3 {
 .intro {
   max-width: 760px;
   line-height: 1.6;
-  color: #4b5c72;
 }
 
 .calculator-card {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: 24px;
+  background-color: #1e746671;
 }
 
 .calculator-form {
@@ -106,7 +108,7 @@ button:hover {
 
 .assumptions-card ul {
   padding-left: 18px;
-  color: #4b5c72;
+  color: #1e2e44;
   line-height: 1.7;
 }
 
