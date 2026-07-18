@@ -37,7 +37,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-size: 0.8rem;
-  color: #1b492e;
+  color: #09582a;
   font-weight: 700;
 }
 
@@ -49,7 +49,7 @@ h3 {
 
 .intro {
   max-width: 760px;
-  line-height: 1.6;
+  line-height: 1.2;
   font-weight: 600;
 }
 
