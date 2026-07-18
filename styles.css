@@ -35,8 +35,9 @@ body {
 
 .eyebrow {
   text-transform: uppercase;
+  text-align: center;
   letter-spacing: 0.2em;
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: #09582a;
   font-weight: 700;
 }
