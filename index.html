@@ -1,106 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Biogas Estimator</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <main class="page-shell">
-      <section class="hero-card">
-        <h4 class="eyebrow">Biogas Calculator Engine ⚙︎</h4>
-        <h3>Estimate a preliminary biogas output profile</h3>
-        <p class="intro">
-          This starter engine uses preset assumptions for mesophilic operation and a
-          simple conversion model to give visitors a first-pass estimate of output,
-          energy potential, and overall feasibility outlook.
-        </p>
-      </section>
 
-      <section class="calculator-card">
-        <form id="biogas-form" class="calculator-form">
-          <div class="field-group">
-            <label for="feedstock">Feedstock type</label>
-            <select id="feedstock" name="feedstock">
-              <option value="foodWaste">Food waste</option>
-              <option value="cowManure">Cow manure</option>
-              <option value="pigManure">Pig manure</option>
-              <option value="energyCrop">Energy crop</option>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biogas Estimator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main class="page-shell">
+    <section class="hero-card">
+      <h4 class="eyebrow">Biogas Calculator Engine ⚙︎</h4>
+      <h4>Estimate a preliminary biogas output profile - </h4>
+      <h5>This starter engine uses preset assumptions for mesophilic operation and a
+        simple conversion model to give visitors a first-pass estimate of output,
+        energy potential, and overall feasibility outlook.</h5>
+      <h6 style="text-align: right; align-items: center;">Powered by <a href="https://www.pamodzibes.com">PBES</a> 🌩️</h6>
+      <p class="intro">
+      </p>
+    </section>
+    <div>
+    </div>
+    <section class="calculator-card">
+      <form id="biogas-form" class="calculator-form">
+        <div class="field-group">
+          <label for="feedstock">Feedstock type</label>
+          <select id="feedstock" name="feedstock">
+            <option value="foodWaste">Food waste</option>
+            <option value="cowManure">Cow manure</option>
+            <option value="pigManure">Pig manure</option>
+            <option value="energyCrop">Energy crop</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label for="feedAmount">Daily attainable feed amount</label>
+          <div class="input-inline">
+            <input id="feedAmount" name="feedAmount" type="number" min="0" step="0.01" value="0" />
+            <select id="feedUnit" name="feedUnit">
+              <option value="kg">kg/day</option>
+              <option value="ton">ton/day</option>
             </select>
           </div>
-
-          <div class="field-group">
-            <label for="feedAmount">Daily attainable feed amount</label>
-            <div class="input-inline">
-              <input id="feedAmount" name="feedAmount" type="number" min="0" step="0.01" value="1000" />
-              <select id="feedUnit" name="feedUnit">
-                <option value="kg">kg/day</option>
-                <option value="ton">ton/day</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="field-group">
-            <label for="hrt">Hydraulic retention time</label>
-            <select id="hrt" name="hrt">
-              <option value="30">30 days</option>
-              <option value="40">40 days</option>
-            </select>
-          </div>
-
-          <div class="field-group">
-            <label for="dryMatter">Dry matter (%)</label>
-            <input id="dryMatter" name="dryMatter" type="number" min="0" max="100" step="1" value="20" />
-          </div>
-
-          <div class="field-group">
-            <label for="vsFactor">Volatile solids (%)</label>
-            <input id="vsFactor" name="vsFactor" type="number" min="0" max="100" step="1" value="80" />
-          </div>
-
-          <button type="submit">Estimate output</button>
-        </form>
-
-        <aside class="assumptions-card">
-          <h2>Preset assumptions</h2>
-          <ul id="assumption-list"></ul>
-        </aside>
-      </section>
-
-      <section class="results-card" aria-live="polite">
-        <h2>Indicative results</h2>
-        <div class="results-grid">
-          <article class="result-box">
-            <span class="label">Estimated biogas</span>
-            <strong id="biogasResult">0 m³/day</strong>
-          </article>
-          <article class="result-box">
-            <span class="label">Energy potential</span>
-            <strong id="energyResult">0 kWh/day</strong>
-          </article>
-          <article class="result-box">
-            <span class="label">Equivalent electricity</span>
-            <strong id="electricityResult">0 kWh/day</strong>
-          </article>
         </div>
-        <div class="note-box">
-          <h3>Serviceability outlook</h3>
-          <p id="serviceNote">A preliminary feasibility note will appear here.</p>
-        </div>
-      </section>
-      <section class="disclaimer-card">
-        <h2>Disclaimer</h2>
-        <p>
-          This calculator is intended for preliminary estimation purposes only. Actual biogas output may vary based on specific feedstock characteristics, operational conditions, and other factors. Users should consult our team for detailed analysis and design.
-        </p>
-        <div class="button-group">
-          <button><a href="https://www.pamodzibes.com">Back to Home</a></button>
-          <button><a href="https://www.pamodzibes.com/#contact">Contact Us</a></button>
-        </div>
-      </section>
-    </main>
 
-    <script src="app.js"></script>
-  </body>
+        <div class="field-group">
+          <label for="hrt">Hydraulic retention time</label>
+          <select id="hrt" name="hrt">
+            <option value="30">30 days</option>
+            <option value="40">40 days</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label for="dryMatter">Dry matter (%)</label>
+          <input id="dryMatter" name="dryMatter" type="number" min="0" max="100" step="1" value="20" />
+        </div>
+
+        <div class="field-group">
+          <label for="vsFactor">Volatile solids (%)</label>
+          <input id="vsFactor" name="vsFactor" type="number" min="0" max="100" step="1" value="80" />
+        </div>
+
+        <button type="submit">Estimate output</button>
+      </form>
+
+      <aside class="assumptions-card">
+        <h2 style="color: aliceblue;">Preset assumptions</h2>
+        <ul id="assumption-list"></ul>
+      </aside>
+    </section>
+
+    <section class="results-card" aria-live="polite">
+      <h2 style="color: white;">Indicative results</h2>
+      <div class="results-grid">
+        <article class="result-box">
+          <span class="label">Estimated biogas</span>
+          <strong id="biogasResult">0 m³/day</strong>
+        </article>
+        <article class="result-box">
+          <span class="label">Energy potential</span>
+          <strong id="energyResult">0 kWh/day</strong>
+        </article>
+        <article class="result-box">
+          <span class="label">Equivalent electricity</span>
+          <strong id="electricityResult">0 kWh/day</strong>
+        </article>
+      </div>
+      <div class="note-box">
+        <h3 style="color: #2d7a4d;">Serviceability Outlook</h3>
+        <p id="serviceNote">A preliminary feasibility note will appear here.</p>
+      </div>
+    </section>
+    <section class="disclaimer-card">
+      <h2>Disclaimer</h2>
+      <p style="  color: #b6da53; font-size: 0.9rem;">
+        This calculator is intended for preliminary estimation purposes only. Actual biogas output may vary based on
+        region-specific feedstock characteristics, operational conditions, and other factors. Users should consult our
+        team for detailed analysis and design specifications.
+      </p>
+    </section>
+    <div class="button-group">
+      <button><a href="https://www.pamodzibes.com"> ↩️ Home</a></button>
+      <button><a href="https://www.pamodzibes.com/#contact"> Contact Us </a></button>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
 </html>

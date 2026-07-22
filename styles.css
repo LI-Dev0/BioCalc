@@ -10,36 +10,40 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0;
-  background: linear-gradient(135deg, #1a5458, #e5eef8);
+  background: linear-gradient(135deg, black, #042224, black, #042224, black);
 }
 
 .page-shell {
-  max-width: 1100px;
-  margin: 0 auto;
+  align-self: center;
+  width: 90%;
+  margin: 0;
   padding: 32px 20px 48px;
-  color: #132238;
+  color: #385e97;
+  background-image: url('./src/images/PBES-logo_E8-Mockup-0-scaledd.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-card,
 .calculator-card,
 .results-card {
-  background-color: #72807571;
-  border: 1px solid #dfe7f1;
+  border: none;
   border-radius: 20px;
   box-shadow: 0 14px 40px rgba(14, 31, 53, 0.08);
   padding: 24px;
-  margin-bottom: 24px;
-  color: #132238;
+  margin-bottom: 14px;
 }
 
 .eyebrow {
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.2em;
-  font-size: 1rem;
-  color: #09582a;
+  font-size: 2rem;
   font-weight: 700;
+  color: whitesmoke;
 }
 
 h1,
@@ -57,22 +61,25 @@ h3 {
 .hero-card {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  background-color: #6d968f6c;
+  gap: 5px;
+  color: #a3bd5b;
+  background-color: #04222491;
   border: none;
-  box-shadow: #132238  0px 4px 12px -2px;
+  box-shadow: #132238 0px 4px 12px -2px;
 }
 
 .calculator-card {
   display: grid;
+  background-color: none;
   grid-template-columns: 1.2fr 0.8fr;
   gap: 24px;
-  background-color: #1e746671;
+  margin: 50px 20px;
 }
 
 .calculator-form {
   display: grid;
   gap: 16px;
+  margin-top: 30px;
 }
 
 .field-group {
@@ -83,6 +90,9 @@ h3 {
 
 label {
   font-weight: 600;
+  font-size: 1.1rem;
+  color: rgb(230, 230, 235);
+  text-align: center;
 }
 
 input,
@@ -92,6 +102,8 @@ button {
   padding: 10px 12px;
   border-radius: 10px;
   border: 1px solid #cfd9e3;
+  background: #f7fafca6;
+  color: #132238;
 }
 
 .input-inline {
@@ -104,8 +116,8 @@ button {
 }
 
 button {
-  background: #2d7a4d;
-  color: white;
+  background-color: #052527e0;
+  color: #a3bd5b;
   border: none;
   cursor: pointer;
   font-weight: 700;
@@ -113,7 +125,8 @@ button {
 }
 
 button:hover {
-  background: #24693f;
+  background: #02131496;
+  color: aliceblue;
   transform: translateY(-1px);
 }
 
@@ -127,12 +140,34 @@ a {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  margin-top: 24px;
+  margin-top: 40px;
 }
+
+.assumptions-card {
+  border-radius: 12px;
+  padding: 16px 18px;
+  color: #2d7a4d;
+  margin-top: 30px;
+}
+
 .assumptions-card ul {
+  display: flex;
+  flex-direction: column;
   padding-left: 18px;
-  color: #1e2e44;
+  color: #a3bd5b;
+  background-color: #04222491;
+  border-radius: 8px;
+  margin: 10px 0;
+  padding: 10px;
+  list-style: none;
+  border: 1px solid #cfd9e3;
   line-height: 1.7;
+  font-weight: 500;
+}
+
+.results-card {
+  background-color: #06303381;
+  margin: 30px 0;
 }
 
 .results-grid {
@@ -162,7 +197,15 @@ a {
   border-left: 4px solid #2d7a4d;
   border-radius: 12px;
   padding: 16px 18px;
-  color: #2d4a3b;
+}
+
+.disclaimer-card {
+  border-left: 4px groove #e67e22;
+  border-radius: 12px;
+  padding: 16px 18px;
+  color: aliceblue;
+  margin-top: 30px;
+  
 }
 
 @media (max-width: 840px) {
