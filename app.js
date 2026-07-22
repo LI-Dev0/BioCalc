@@ -86,8 +86,12 @@ function estimateBiogas() {
     serviceNote.textContent = 'This level suggests strong potential for a larger on-site energy project, especially where heat and electricity demand are steady.';
   } else if (biogasM3PerDay >= 40) {
     serviceNote.textContent = 'This is a meaningful mid-scale profile that could support practical energy recovery and merits a deeper site assessment.';
-  } else {
-    serviceNote.textContent = 'This points to a smaller pilot-scale opportunity and is best treated as an early-stage feasibility estimate.';
+  } else if (biogasM3PerDay >= 10) {
+    serviceNote.textContent = 'This points to a smaller pilot-scale opportunity and is best treated as an early-stage feasibility estimate. This may be suitable for small farms or community energy projects.';
+  } else if (biogasM3PerDay > 4) {
+    serviceNote.textContent = 'This level suggests a very small-scale operation, potentially suitable only for prototype demonstration or educational purposes.';
+  } else if (biogasM3PerDay === 0) {
+    serviceNote.textContent = 'This indicates no biogas production under the current assumptions.';
   }
 }
 
